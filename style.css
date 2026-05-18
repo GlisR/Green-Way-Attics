@@ -258,47 +258,59 @@ nav {
   gap: 14px;
 }
 
+/* NEW 2-IMAGE HERO LAYOUT */
 .hero-right {
   position: relative;
   background: var(--cream);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 6px;
+  min-height: 620px;
   padding: 32px;
 }
 
-.hero-right::before {
-  content: '';
+.hero-bg-block {
   position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 80px;
-  height: 80px;
-  background-image: radial-gradient(var(--sand) 1.5px, transparent 1.5px);
-  background-size: 10px 10px;
-  opacity: .7;
+  left: 24px;
+  bottom: 32px;
+  width: 55%;
+  height: 48%;
+  background: #8aaa82;
   z-index: 1;
 }
 
 .hero-img {
+  position: absolute;
   overflow: hidden;
-  position: relative;
+  border: 2px solid rgba(168, 144, 112, .55);
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+  z-index: 2;
 }
 
-.hero-img img {
+.hero-img-big {
+  top: 32px;
+  right: 32px;
+  width: 78%;
+  height: 66%;
+}
+
+.hero-img-small {
+  left: 56px;
+  bottom: 64px;
+  width: 58%;
+  height: 44%;
+}
+
+.hero-img img,
+.hero-img .img-placeholder {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-img img {
   transition: transform .5s ease;
 }
 
 .hero-img:hover img {
   transform: scale(1.04);
-}
-
-.hero-img.tall {
-  grid-row: span 2;
 }
 
 .img-placeholder {
@@ -739,8 +751,29 @@ footer {
   }
 
   .hero-right {
-    min-height: 420px;
-    padding: 20px;
+    min-height: 620px;
+    padding: 24px;
+  }
+
+  .hero-bg-block {
+    left: 24px;
+    bottom: 48px;
+    width: 55%;
+    height: 44%;
+  }
+
+  .hero-img-big {
+    top: 24px;
+    right: 24px;
+    width: 78%;
+    height: 62%;
+  }
+
+  .hero-img-small {
+    left: 48px;
+    bottom: 72px;
+    width: 58%;
+    height: 38%;
   }
 
   .services,
@@ -799,14 +832,11 @@ footer {
     left: 0;
     width: 100%;
     background: var(--white);
-
     display: flex;
     flex-direction: column;
     gap: 0;
-
     max-height: 0;
     overflow: hidden;
-
     transition: max-height .35s ease;
     border-bottom: 1px solid rgba(0,0,0,.08);
     box-shadow: 0 8px 20px rgba(0,0,0,.06);
@@ -837,6 +867,32 @@ footer {
 
   .hero-ctas {
     flex-wrap: wrap;
+  }
+
+  .hero-right {
+    min-height: 520px;
+    padding: 20px;
+  }
+
+  .hero-bg-block {
+    left: 20px;
+    bottom: 36px;
+    width: 58%;
+    height: 42%;
+  }
+
+  .hero-img-big {
+    top: 20px;
+    right: 20px;
+    width: 82%;
+    height: 58%;
+  }
+
+  .hero-img-small {
+    left: 28px;
+    bottom: 64px;
+    width: 68%;
+    height: 34%;
   }
 
   .services-grid {

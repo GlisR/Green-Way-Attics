@@ -59,3 +59,19 @@ navLinks.forEach(link => {
     menuToggle.classList.remove('active');
   });
 });
+
+// Gallery show / hide
+const galleryBtn = document.getElementById('gallery-btn');
+const hiddenPhotos = document.querySelectorAll('.gallery-hidden');
+
+galleryBtn.addEventListener('click', () => {
+  hiddenPhotos.forEach(photo => {
+    photo.classList.toggle('show');
+  });
+
+  if (galleryBtn.textContent.includes('View Full Gallery')) {
+    galleryBtn.textContent = 'Hide Gallery ↑';
+  } else {
+    galleryBtn.textContent = 'View Full Gallery →';
+  }
+});

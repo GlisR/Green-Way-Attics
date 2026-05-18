@@ -461,6 +461,27 @@ nav {
   transform: scale(1.07);
 }
 
+.gallery-hidden {
+  display: none;
+}
+
+.gallery-hidden.show {
+  display: block;
+  animation: fadeGallery .45s ease forwards;
+}
+
+@keyframes fadeGallery {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -543,6 +564,9 @@ nav {
   width: 16px;
   height: 16px;
   stroke: var(--sand);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .contact-item-text label {

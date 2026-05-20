@@ -189,7 +189,7 @@ nav {
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: calc(100vh - 68px);
+    min-height: calc(100vh - 88px);
     background: var(--cream);
     position: relative;
     overflow: hidden;
@@ -832,7 +832,7 @@ footer {
 
     .nav-links {
         position: absolute;
-        top: 68px;
+        top: 88px;
         left: 0;
         width: 100%;
         background: var(--white);

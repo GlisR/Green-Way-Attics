@@ -362,9 +362,9 @@ nav {
 }
 
 .service-icon {
-  width: 54px;
-  height: 54px;
-  margin-bottom: 20px;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 26px;
 
   display: flex;
   align-items: center;
@@ -375,14 +375,9 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: contain;
-
-  filter: brightness(0) saturate(100%) invert(24%) sepia(15%) saturate(1028%) hue-rotate(67deg) brightness(92%) contrast(89%);
+  display: block;
 }
 
-/* White icons on dark cards */
-.service-card.dark .service-icon img {
-  filter: brightness(0) invert(1);
-}
 
 .service-icon svg {
   width: 100%;

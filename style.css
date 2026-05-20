@@ -518,13 +518,33 @@ nav {
 
 /* CONTACT */
 .contact {
+    position: relative;
+    overflow: hidden;
     background: var(--green-dark);
-    padding: 80px;
+    padding: 80px 80px 80px 170px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.1fr 1.2fr 1fr;
     gap: 40px;
     align-items: center;
 }
+
+.contact-leaves {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.contact-left,
+.contact-info,
+.contact-right {
+    position: relative;
+    z-index: 2;
+}
+
 
 .contact-left h2 {
     font-family: 'Playfair Display', serif;
@@ -791,12 +811,55 @@ footer {
     }
 
     .contact {
+        position: relative;
+        overflow: hidden;
+
+        padding: 72px 48px 72px 110px;
+
+        display: grid;
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 42px;
+
+        align-items: flex-start;
+    }
+
+    .contact-left,
+    .contact-info,
+    .contact-right {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .contact-left h2 {
+        font-size: 52px;
+        line-height: 1.08;
+    }
+
+    .contact-left p {
+        max-width: 680px;
+    }
+
+    .contact-info {
+        gap: 28px;
     }
 
     .contact-right {
         justify-content: flex-start;
+    }
+
+    /* LEAVES */
+    .contact-leaves {
+        position: absolute;
+        left: -35px;
+        bottom: -20px;
+
+        width: 190px;
+
+        opacity: 0.5;
+
+        z-index: 1;
+        pointer-events: none;
     }
 
     .footer-grid {
@@ -897,6 +960,73 @@ footer {
         bottom: 64px;
         width: 68%;
         height: 34%;
+    }
+
+    .contact {
+        position: relative;
+        overflow: hidden;
+
+        padding: 56px 24px 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 36px;
+    }
+
+    .contact-left,
+    .contact-info,
+    .contact-right {
+        width: 100%;
+        z-index: 2;
+    }
+
+    .contact-left h2 {
+        font-size: 42px;
+        line-height: 1.1;
+        margin-bottom: 18px;
+    }
+
+    .contact-left p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .contact-info {
+        gap: 28px;
+    }
+
+    .contact-item {
+        gap: 16px;
+    }
+
+    .contact-item-text p {
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .contact-right {
+        justify-content: flex-start;
+    }
+
+    .contact-right .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+        font-size: 18px;
+    }
+
+    /* LEAF IMAGE */
+    .contact-leaves {
+        position: absolute;
+        left: -55px;
+        bottom: -40px;
+
+        width: 180px;
+
+        opacity: 0.45;
+
+        z-index: 1;
+        pointer-events: none;
     }
 
     .services-grid {

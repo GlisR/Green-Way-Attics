@@ -624,7 +624,8 @@ nav {
 
 /* FOOTER */
 footer {
-    background: #3A2F2A;/*3A2F2A- коричневый,#111f18- зеленый*/
+    background: #3A2F2A;
+    /*3A2F2A- коричневый,#111f18- зеленый*/
     padding: 40px 80px 32px;
 }
 
@@ -961,6 +962,26 @@ footer {
         bottom: 64px;
         width: 68%;
         height: 34%;
+    }
+
+    .services-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        text-align: center;
+
+        padding: 20px 24px;
+    }
+
+    .services-banner span {
+        margin: 0;
+    }
+
+    /* Hide the bullet on phones */
+    .services-banner span:nth-child(2) {
+        display: none;
     }
 
     .contact {
